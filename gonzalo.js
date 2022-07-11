@@ -1,7 +1,13 @@
 
+$(document).ready(function(){
+    listaPokemons()
+})
+function obtenerPokemon(NombrePokemon2){
 
-function obtenerPokemon(){
-    let NombrePokemon = $("#idPokemon").val().trim()
+    let NombrePokemon = $("#idPokemon").val().trim();
+    if (NombrePokemon2!=null && NombrePokemon2!=undefined){
+        NombrePokemon = NombrePokemon2;
+    };
     if (NombrePokemon!=0){
         var settings = {
             "url": "https://pokeapi.co/api/v2/pokemon/" + NombrePokemon,
@@ -32,6 +38,31 @@ function dibujarPokemon(pokemon){
         <li>Habilidades: ${m.move.name}</li>
     `)
     })
+    
+    
+}
+function listaPokemons(){
+    let liPokemon;
+
+    var settings = {
+        "async":false,
+        "url": "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0",
+        "method": "GET",
+        "timeout": 0,
+      };
+      
+      $.ajax(settings).done(function (response) {
+        liPokemon = response.results;
+      });
+
+    $("#listaPokemon").empty();
+    console.log(liPokemon);
+    liPokemon.forEach(p => {        
+        $("#listaPokemon").append(`
+            <li class="list-group-item" onclick="obtenerPokemon('${p.name}')">${p.name}</li>
+        `)
+    });
+    
     
     
 }
