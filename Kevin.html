@@ -1,46 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
-
-    <title>Pokemon</title>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="icon" href="./img/Logo_cine.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/carousel.css"> 
+    <link rel="stylesheet" href="./css/acordeon.css">
+    <link rel="stylesheet" href="./css/album.css">
+    <link rel="stylesheet" href="./css/socio.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/modals.css">
+    <!-- Fin CSS -->
+    <title>A Cine+</title>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Buscar Pokemon</h1>
-        <br />
-        <form>
-            <div class="form-group">
-                <label for="idPokemon">Nombre Pokemon</label>
-                <input type="text" class="form-control" id="idPokemon" />
-                <small id="idPokemon" class="form-text text-muted">Escribe el nombre de tu pokemon</small>
-            </div>
-        </form>
-        <button type="button" onclick="obtenerPokemon()" class="btn btn-primary">
-            Obtene Pokemon
-        </button>
+    <!-- Carrusel -->
+    <div id="myCarousel" class="carousel slide design" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="transition: 0.6s; background-image: url(https://cdn.cineplanet.com.pe/contentAsset/raw-data/c31aaef3-4cfb-47cf-b6e0-c802ab78babd); background-size: cover;">
+          
 
-        <hr />
-        <div class="card">
-            <div class="card-header" id="idDatos"></div>
-            <div class="card-body">
-                <ol id="idHabilidad"></ol>
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1 class="h1_carrusel">El Fantasma de Martyrs Lane</h1>
+              <p>Leah es una niña de 10 años quien vive en una antigua y oscura parroquia donde se escuchan raros sonidos durante la noche.</p>
+              <p><a class="btn btn-lg btn-danger" href="#">Comprar</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="transition: 0.6s; background-image: url(https://cdn.cineplanet.com.pe/contentAsset/raw-data/64a92c74-7720-449b-9952-7e18fe170287); background-size: cover;">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="h1_carrusel">El Cuarto 666</h1>
+              <p>La doctora Bianca Valentino es contratada para cubrir el turno de noche en la sala de un hospital pediátrico.</p>
+              <p><a class="btn btn-lg btn-danger" href="#">Comprar</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="transition: 0.6s; background-image: url(https://cdn.cineplanet.com.pe/contentAsset/raw-data/5d920858-2e76-460a-9535-27fbca8e95cb); background-size: cover;">
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1 class="h1_carrusel">El Teléfono Negro</h1>
+              <p>En una ciudad de Colorado, en los años 70, un enmascarado secuestra a Finney Shaw, un chico tímido e inteligente de 13 años.</p>
+              <p><a class="btn btn-lg btn-danger" href="#">Comprar</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>  
+
+  <div class="container">
+
+    <!-- Nav var -->
+    <main class="main-container fixed-top">
+      <nav id="navegacion" class="navbar navbar-expand-lg navbar-dark fixed-top " aria-label="Ninth navbar example">
+        <div class="container nav_style">
+          <section class="nav_logo">
+            <a id="idInicio"class="nav-link nav_logo" href="#">
+            <img class="logo_img" src="./img/Logo_cine.png" alt="">
+            <p class="text_logo">A Cine +</p>
+            </a>
+          </section>  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse " id="navbarsExample07XL">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li id="idBotonPeliculas" class="nav-item">
+                <a  class="nav-link" aria-current="page" href="#">Películas</a>
+              </li>
+              <li id="idBotonCine" class="nav-item">
+                <a class="nav-link" href="#">Cines</a>
+              </li>
+              <li id="idBotonDulces" class="nav-item">
+                <a class="nav-link" href="#">Dulcería</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Promociones</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <ul class="lista_icons">
+                <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass ul_icons"></i></a>
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalSignin" style="transition: 0.6s;"><i class="fa-regular fa-user ul_icons"></i></a>                                
+                <a class="nav-link" href="#"><i class="fa-solid fa-phone ul_icons"></i></a>
+    
+              </ul>
+            </ul>
+            
+          </div>
+          
+        </div>
+      </nav>
+    </main>
+
+    <!-- Seccion del inicio -->
+    <div id="seccion01">
+      <main>
+    <!-- Album de peliculas -->
+    <div class="row album">
+
+        <div id="columna1" class="col">
+    
+        </div>
+
+        
+        <div class="col">
+          <div id="columna4"class="col">
+
+          </div>
+          <div class="row">
+            <div id="columna5" class="col">
+              
             </div>
         </div>
+        </div> 
+    </div>
+    
+    <!-- Se nuestro socio :V -->
+      <div class="container_socio">
+        <div class="container_socio_col1">
+          <img class="container_socio_col1_img"src="./img/socio.svg" alt="">
+        </div>
+        <div class="container_socio_col2">
+          <h1 class="h1_title">Hola Usuario!</h1>
+          <p class="text_p">Estas listo para ver peliculas a montón y disfrutar en familia?. Únete a nostros y se parte de A CINE+</p>
+          <button class="container_socio_col2_boton" data-bs-toggle="modal" data-bs-target="#modalSignin">Únete</button>
+        </div>
+      </div>
+      </main>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
-    <script src="./Kevin.js"></script>
+    <!-- Seccion de Peliculas -->
+    <div id="seccion02" style="display: none ;padding: 50px">
+      
+      <main style="padding-top: 100px;">
+
+        <section class="py-5 text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="fw-light">Películas</h1>
+              <hr>
+                <a id="botonCartelera" href="#" class="btn btn-danger my-2">En Cartelera</a>
+                <a id="botonEstrenos" href="#" class="btn btn-secondary my-2">Próximos Estrenos</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      
+        <div class="album py-5 bg-light">
+          <div class="container">
+      
+            <div id="catalogoPelis" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            </div>
+
+            <div id="catalogoEstrenos" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="display: none;">
+
+            </div>
+          </div>
+        </div>
+      
+      </main>
+    </div>
+
+    <!-- Seccion de Cines -->
+    <div id="seccion03" style="display: none ;padding: 50px">
+      <main style="padding-top: 100px;">
+
+        <section class="py-5 text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="fw-light">Cines</h1>
+              <hr>
+              
+              </p>
+            </div>
+          </div>
+        </section>
+      
+        <div class="album py-5 bg-light">
+          <div class="container">
+      
+            <div id="cines" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            </div>
+          </div>
+        </div>
+      
+      </main>
+    </div>
+
+    <!-- Seccion de Comida -->
+    <div id="seccion04" style="display: none ;padding: 50px">
+      <main style="padding-top: 100px;">
+
+        <section class="py-5 text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="fw-light">Dulcería</h1>
+              <hr>
+                <a id="botonCanchita" href="#" class="btn btn-danger my-2">Palomitas</a>
+                <a id="botonBebidas" href="#" class="btn btn-secondary my-2">Bebidas</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      
+        <div class="album py-5 bg-light">
+          <div class="container">
+      
+            <div id="canchita" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      
+                  <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      
+                  <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      
+                  <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      
+                  <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      
+                  <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      
+                  <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="bebidas" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="display: none;">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      
+                  <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      
+                  <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </main>
+    </div>
+  </div>
 </body>
 
+    <footer class="py-3 my-4 footer_design">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item" ><a href="#" class="nav-link px-2 text-muted" >Inicio</a></li>
+        <div class="xd"></div>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Social Networks</a></li>
+        
+        <li class="nav-item"><a href="https://www.facebook.com" class="nav-link px-2 text-muted" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li class="nav-item"><a href="https://web.whatsapp.com" class="nav-link px-2 text-muted" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+        <li class="nav-item"><a href="https://www.instagram.com" class="nav-link px-2 text-muted" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+      <p class="text-center">&copy; 2022 Company, Inc</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal modal-signin py-5 login" tabindex="-1" role="dialog" id="modalSignin">
+      <div class="modal-dialog" role="document" style="transition: 0.6s;">
+        <div class="modal-content rounded-4 shadow" >
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <!-- <h5 class="modal-title">Modal title</h5> -->
+            <h2 class="fw-bold mb-0">Inicia Sesión</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+    
+          <div class="modal-body p-5 pt-0">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Correo Electrónico</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Contraseña</label>
+              </div>
+              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Iniciar Sesión</button>
+              
+              <hr class="my-4">
+              <h2 class="fs-5 fw-bold mb-3">O Registrate con</h2>
+              <a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser" target="_blank">
+              <div class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" >
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#google"/></svg>
+                Google
+              </div>
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <div class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
+                Facebook
+              </div>
+            </a>
+            <a href="https://office.live.com/start/Outlook.aspx?omkt=es-PE" target="_blank">
+              <div class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#outlook"/></svg>
+                Outlook
+              </div>
+            </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/Kevin.js"></script>
+  <script src="./js/arrays.js"></script>
+  <script>
+    $(window).scroll(function(){
+      if($("#navegacion").offset().top > 571){
+        $("#navegacion").addClass("bg-dark");
+      }
+      else{
+        $("#navegacion").removeClass("bg-dark");
+      }
+    })
+  </script>
 </html>

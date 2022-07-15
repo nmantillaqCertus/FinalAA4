@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+.padre{
+    margin: 0 175px 0 175px;
+}
+.dropdown-item{
+    
+    padding: 5px;
+    padding-left: 19px;
+}
+.dropdown-item:hover{
+    background-color: rgba(217, 56, 110, 0.5); 
+}
+.form-select{
+    border-radius: 0%;
+    border-color: none;
+}
+.form-select:focus{
+    border-color: none;
+}
+.form_options{
+    border-radius: 0%;
+}
+
+
+
+
+
+
+
+
+
+@media(max-height: 400px){
+    
+    .padre{
+        margin: auto;
+    }
+}

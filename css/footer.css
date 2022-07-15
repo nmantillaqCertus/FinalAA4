@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.footer_design{
+    margin-bottom: 0 !important;
+    background-color: hsla(0, 0%, 50%, 0.1);
+}
+.xd{
+    width: 1px;
+    margin: 0px 8px;
+    opacity: 0.2;
+    min-height: 32px;
+    background: rgb(123, 134, 148);
+}

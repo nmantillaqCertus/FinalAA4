@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container_socio{
+    width: 992px;
+    height: 424px;
+    display: flex;
+    /* border : 1px solid red; */
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 100px;
+}
+.container_socio_col1{
+    width: 44%;
+}   
+.container_socio_col1_img{
+    
+    padding: 10px;
+    width: 80%;
+
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.container_socio_col2{
+    width: 555px;
+    height: 424px;
+    padding: 65px 95px 0 95px;
+    background-color: var(--gray-light);
+    box-shadow: 10px 10px rgba(255, 0, 0, 0.5);
+    position: relative;
+    /* position: absolute; */
+    /* left: 435px; */
+}
+.h1_title{
+    font-size: 75px;
+    font-weight: 900;
+    line-height: 80px;
+}
+.container_socio_col2_boton{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+.container_socio_col2_boton:hover{
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+    
+}
+@media(max-width : 1080px){
+    .container_socio{
+        width: 600px;
+        height: auto;
+    }
+    .container_socio_col2{
+        width: 355px;
+        height: 324px;
+        padding: 65px 65px 0 65px;
+    }
+    .h1_title{
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .text_p{
+        font-size: 10px;
+    }
+    .container_socio_col2_boton{
+        width: 110px;
+        height: 40px;
+        font-size: 10px;
+
+    }   
+}
+@media(max-width : 800px){
+    .container_socio{
+        height: auto;
+        display: contents;
+        padding: 0 auto;
+    }
+    .container_socio_col1{
+        margin: auto;
+        margin-top: -60px;
+        width: 75%;
+    }
+    .container_socio_col2{
+        height: 300px;
+        padding: 45px 45px 0 45px;
+        margin: auto;
+    }
+    .h1_title{
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .text_p{
+        font-size: 14px;
+    }
+    .container_socio_col2_boton{
+        width: 93px;
+        height: 35px;
+
+    }   
+    .container_socio_col2_boton:hover{
+        box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+        
+    }
+    .container_socio_col1_img{
+        margin: auto;
+        width: 100%;
+    }
+}
